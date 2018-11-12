@@ -5,6 +5,8 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
+    "pre-deploy": "ng build && ng lint",
+    "deploy": "cd dist/pinterest-clone && surge --domain pinterest-clone.surge.sh",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
