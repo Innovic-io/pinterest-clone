@@ -8,6 +8,7 @@ import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './share/shared.module';
 import { HeaderComponent } from './components/header/header.component';
+import { FormComponent } from './components/form/form.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { HeaderComponent } from './components/header/header.component';
     DashboardComponent,
     AddComponent,
     AboutComponent,
-    HeaderComponent
+    HeaderComponent,
+    FormComponent
   ],
   imports: [
     BrowserModule,
