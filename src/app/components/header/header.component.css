@@ -1,0 +1,9 @@
+.logo {
+  padding: 11px;
+}
+.search {
+  flex-grow: 2;
+}
+.navbar {
+  border-bottom: 1px solid lightgray;
+}

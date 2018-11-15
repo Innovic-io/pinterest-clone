@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -9,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './share/shared.module';
 import { HeaderComponent } from './components/header/header.component';
 import { FormComponent } from './components/form/form.component';
+import { SearchComponent } from './components/header/search/search.component';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { FormComponent } from './components/form/form.component';
     AddComponent,
     AboutComponent,
     HeaderComponent,
-    FormComponent
+    FormComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AngularFontAwesomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
