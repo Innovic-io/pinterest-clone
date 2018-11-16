@@ -4,4 +4,13 @@
 
 body {
   font-family: 'Open Sans', sans-serif;
+  background-color: #efefef;
 }
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
