@@ -9,7 +9,6 @@ import { AboutComponent } from './components/about/about.component';
 import { AppRoutingModule } from './app-routing.module';
 import { SharedModule } from './share/shared.module';
 import { HeaderComponent } from './components/header/header.component';
-import { FormComponent } from './components/form/form.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { FormsModule } from '@angular/forms';
 
@@ -21,7 +20,6 @@ import { FormsModule } from '@angular/forms';
     AddComponent,
     AboutComponent,
     HeaderComponent,
-    FormComponent,
     SearchComponent
   ],
   imports: [
