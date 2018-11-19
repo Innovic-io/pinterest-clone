@@ -14,3 +14,11 @@ button:focus {
   outline: none;
 }
 
+.ng-valid[required], .ng-valid.required  {
+  border-left: 5px solid #a3e0b0;
+}
+
+.ng-invalid[required], .ng-invalid.required  {
+  border-left: 5px solid #be311c;
+}
+

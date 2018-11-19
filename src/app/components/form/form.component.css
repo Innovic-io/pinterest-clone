@@ -20,7 +20,6 @@ input {
   height: 100%;
   line-height: 20px;
   width: 100%;
-  cursor: pointer;
   padding: 12px 14px;
 }
 textarea {
@@ -28,7 +27,6 @@ textarea {
   color: #333;
   font-size: 16px;
   font-weight: 600;
-  cursor: pointer;
 }
 .inputColor {
   background-color: #efefef;
@@ -44,11 +42,15 @@ button {
   border-radius: 4px;
   border: none;
 }
-button:hover {
+button:enabled:hover {
   background-color: #d7d7d7;
 }
 .buttonStyle {
   border-top: 1px solid #efefef;
   padding-top: 18px;
+}
+button:disabled,
+button[disabled]{
+  color: #8e8e8e;
 }
 
