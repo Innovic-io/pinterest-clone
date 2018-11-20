@@ -1,0 +1,11 @@
+.masonry {
+  column-count: 7;
+}
+.item {
+  display: inline-block;
+  width: 100%;
+}
+
+
+
+
