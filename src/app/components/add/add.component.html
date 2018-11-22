@@ -1,8 +1,20 @@
 <form  #addForm="ngForm" class="d-flex justify-content-center pt-3">
   <div class="form-row row bg-white">
     <div class="col-12 pb-2"><p>Add item</p></div>
+    <div></div>
+    <div class="col-6 imgFile">
+      <div class="bgImgColor d-flex justify-content-center align-items-center">
+        <div class="iconPic"><i class="fa fa-camera"></i>
+          <div><p class="picText">Click to upload</p></div>
+        </div>
+        <input type="file" name="picture" ngModel accept="image/*" (change)="handleFileInput($event.target.files)">
+      </div>
+      <div *ngIf="imageUrl" class="imageUpload">
+        <img class="imgDisplay" [src]="imageUrl">
+      </div>
+    </div>
     <div class="col-6">
-      <div class="form-group pb-3">
+      <div class="form-group">
         <label >Title</label>
         <input required minlength="3" autocomplete="off" name="title" #title="ngModel" ngModel class="form-control inputColor" type="text" >
         <div class="text-danger" *ngIf="title?.dirty && title?.invalid">
@@ -15,8 +27,6 @@
         <input required autocomplete="off" name="author" #author="ngModel" ngModel class="form-control inputColor" type="text" >
         <div class="text-danger" *ngIf="author.dirty && author.invalid">Author is required.</div>
       </div>
-    </div>
-    <div class="col-6 pl-4">
       <div class="form-group">
         <label>Description</label>
         <textarea required rows="6" name="description" ngModel class="form-control inputColor" ></textarea>
