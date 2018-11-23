@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-add',
@@ -7,18 +7,30 @@ import { Component } from '@angular/core';
 })
 export class AddComponent {
   imageUrl: string;
-  fileToUpload: File = null;
+
+  @ViewChild('fileInput') fileInput: ElementRef;
 
   addPin(data) {
     console.log(data);
   }
 
   handleFileInput(file: FileList) {
-    this.fileToUpload = file.item(0);
+
+    const fileToUpload: File = file.item(0);
     const reader = new FileReader();
-    reader.onload = (event: any) => {
-      this.imageUrl = event.target.result;
+
+    if (fileToUpload && fileToUpload.type.match('image.*')) {
+      reader.readAsDataURL(fileToUpload);
     }
-    reader.readAsDataURL(this.fileToUpload);
+
+    reader.onloadend = (event: any) => {
+      this.imageUrl = event.target.result;
+    };
+
+    this.fileInput.nativeElement.value = null;
+  }
+
+  clearSelectedPicture() {
+    this.imageUrl = null;
   }
 }

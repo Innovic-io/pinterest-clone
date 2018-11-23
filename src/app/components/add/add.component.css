@@ -64,17 +64,21 @@ button[disabled]{
   height: 420px;
 }
 .bgImgColor {
-  background-color: #efefef;
   width: 320px;
   height: 100%;
   border-radius: 10px;
 }
+
+.gray {
+  background-color: #efefef;
+}
+
 input[type=file] {
   cursor: pointer;
   height: 100%;
   opacity: 0;
   position: absolute;
-  width: 100%;
+  width: 320px;
   left: 0px;
   top: 0px;
   font-size: 0px;
@@ -92,12 +96,31 @@ input[type=file] {
   letter-spacing: -.4px;
   margin-top: 5px;
 }
-.imageUpload {
-  width: 320px;
+.iconPicNone {
+  display: none;
 }
 .imgDisplay {
   width: 320px;
   height: 100%;
   position: absolute;
   top: 0px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
 }
+.fa-times {
+  font-size: 25px;
+}
+.xButton {
+  border-radius:50%;
+  background-color: #ffffff;
+  left: 0px;
+  top: 0px;
+  position: absolute;
+  margin: 12px;
+  text-align: center;
+  padding: 7px 10px;
+}
+

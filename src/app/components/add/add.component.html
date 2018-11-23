@@ -3,14 +3,17 @@
     <div class="col-12 pb-2"><p>Add item</p></div>
     <div></div>
     <div class="col-6 imgFile">
-      <div class="bgImgColor d-flex justify-content-center align-items-center">
-        <div class="iconPic"><i class="fa fa-camera"></i>
-          <div><p class="picText">Click to upload</p></div>
+      <div [ngClass]="{'gray': !imageUrl}" class="bgImgColor d-flex justify-content-center align-items-center">
+        <div [ngClass]="{'iconPicNone': imageUrl}">
+          <div class="iconPic"><i class="fa fa-camera"></i>
+            <div><p class="picText">Click to upload</p></div>
+          </div>
         </div>
-        <input type="file" name="picture" ngModel accept="image/*" (change)="handleFileInput($event.target.files)">
+        <input #fileInput type="file" name="picture" ngModel accept="image/*" (drop)="handleFileInput($event.target.files)" (change)="handleFileInput($event.target.files)">
       </div>
-      <div *ngIf="imageUrl" class="imageUpload">
-        <img class="imgDisplay" [src]="imageUrl">
+      <div *ngIf="imageUrl">
+        <div class="imgDisplay" [ngStyle]="{'background-image': 'url('+ imageUrl + ')'}"></div>
+        <button class="xButton" type="button" (click)="clearSelectedPicture()"><i class="fa fa-times"></i></button>
       </div>
     </div>
     <div class="col-6">
