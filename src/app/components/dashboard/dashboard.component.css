@@ -1,0 +1,45 @@
+.masonry {
+  column-count: 7;
+}
+.item {
+  display: inline-block;
+  width: 100%;
+}
+
+/** responsive cards **/
+@media only screen and (min-width: 1820px) {
+  .masonry {
+    column-count: 7;
+  }
+}
+@media (min-width: 1560px) and (max-width: 1819px) {
+  .masonry {
+    column-count: 6;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1559px) {
+  .masonry {
+    column-count: 5;
+  }
+}
+@media (min-width: 1040px) and (max-width: 1299px) {
+  .masonry {
+    column-count: 4;
+  }
+}
+@media (min-width: 780px) and (max-width: 1039px) {
+  .masonry {
+    column-count: 3;
+  }
+}
+@media (min-width: 0px) and (max-width: 779px) {
+  .masonry {
+    column-count: 2;
+  }
+}
+
+
+
+
+
+

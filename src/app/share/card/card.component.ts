@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { CardItem } from '../../models/dashboard-card-items.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -6,11 +7,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent implements OnInit {
+export class CardComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  @Input() cardItem: CardItem;
 }

@@ -1,1 +1,43 @@
-<p>Add component work's</p>
+<form  #addForm="ngForm" class="d-flex justify-content-center pt-3">
+  <div class="form-row row bg-white">
+    <div class="col-12 pb-2"><p>Add item</p></div>
+    <div></div>
+    <div class="col-6 imgFile">
+      <div [ngClass]="{'gray': !imageUrl}" class="bgImgColor d-flex justify-content-center align-items-center">
+        <div [ngClass]="{'iconPicNone': imageUrl}">
+          <div class="iconPic"><i class="fa fa-camera"></i>
+            <div><p class="picText">Click to upload</p></div>
+          </div>
+        </div>
+        <input #fileInput type="file" name="picture" ngModel accept="image/*" (drop)="handleFileInput($event.target.files)" (change)="handleFileInput($event.target.files)">
+      </div>
+      <div *ngIf="imageUrl">
+        <div class="imgDisplay" [ngStyle]="{'background-image': 'url('+ imageUrl + ')'}"></div>
+        <button class="xButton" type="button" (click)="clearSelectedPicture()"><i class="fa fa-times"></i></button>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="form-group">
+        <label >Title</label>
+        <input required minlength="3" autocomplete="off" name="title" #title="ngModel" ngModel class="form-control inputColor" type="text" >
+        <div class="text-danger" *ngIf="title?.dirty && title?.invalid">
+          <div *ngIf="!title?.value?.length">Title is required.</div>
+          <div *ngIf="title?.value?.length && title?.value?.length < 3">Title should be minimum 3 characters.</div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Author</label>
+        <input required autocomplete="off" name="author" #author="ngModel" ngModel class="form-control inputColor" type="text" >
+        <div class="text-danger" *ngIf="author.dirty && author.invalid">Author is required.</div>
+      </div>
+      <div class="form-group">
+        <label>Description</label>
+        <textarea required rows="6" name="description" ngModel class="form-control inputColor" ></textarea>
+      </div>
+      <div class="d-flex justify-content-between buttonStyle">
+        <button type="button"  [routerLink]="['./dashboard']" >Cancel</button>
+        <button type="button" [disabled]="addForm.invalid || addForm.untouched" (click)="addPin(addForm.value); addForm.reset()">Create</button>
+      </div>
+    </div>
+  </div>
+</form>

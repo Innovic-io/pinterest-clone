@@ -1,0 +1,27 @@
+.logo {
+  padding: 11px;
+}
+.search {
+  flex-grow: 2;
+}
+.navbar {
+  border-bottom: 1px solid #efefef;
+}
+a {
+  color: #8e8e8e;
+  font-weight: bold;
+  cursor: pointer;
+}
+li:hover {
+  background-color: #efefef;
+  border-radius: 999px;
+}
+.active {
+  color: #211922;
+}
+img:hover {
+  border: 1px solid lightgray;
+  border-radius: 50%;
+  box-shadow: 0 0 1px 10px #efefef;
+  transform: scale(1.1);
+}

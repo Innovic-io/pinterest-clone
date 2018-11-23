@@ -1,0 +1,44 @@
+.backgroundStyle {
+  background: url(https://about.pinterest.com/sites/about/files/homepage_template_lrg_bkgd.jpg) center;
+  height: 700px;
+  width: 100%;
+  background-size: cover;
+}
+.homeText {
+  max-width: 1000px;
+  margin: 0 auto;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 50px;
+  max-width: 500px;
+  line-height: 1;
+  margin: 0 0 20px;
+  font-weight: bolder;
+}
+h3 {
+  font-weight: 700;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.8px;
+  font-size: 45px;
+}
+p {
+  font-family: inherit;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.1px;
+  font-size: 1.25rem;
+  line-height: 1.4em;
+
+}
+.about {
+  max-width: 1200px;
+  color: #555555;
+  padding: 60px 0px;
+}

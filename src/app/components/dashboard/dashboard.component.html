@@ -1,1 +1,5 @@
-<p> Dashboard component work's </p>
+<div class="masonry bg-white p-3">
+  <div *ngFor="let cardItem of cardItems" class="item">
+    <app-card [cardItem]="cardItem"></app-card>
+  </div>
+</div>

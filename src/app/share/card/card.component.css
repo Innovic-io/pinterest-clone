@@ -1,0 +1,12 @@
+.card {
+  border: none;
+  border-radius: 6px;
+}
+img {
+  border-radius: 6px;
+  width: 100%;
+}
+.card-body:hover {
+  background-color: #efefef;
+  border-radius: 6px;
+}
