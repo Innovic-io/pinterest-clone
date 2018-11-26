@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { CardItem } from '../../models/dashboard-card-items.model';
+import { IPin } from '../../models/dashboard-card-items.model';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,5 +9,5 @@ import { CardItem } from '../../models/dashboard-card-items.model';
 })
 export class CardComponent {
 
-  @Input() cardItem: CardItem;
+  @Input() pin: IPin;
 }

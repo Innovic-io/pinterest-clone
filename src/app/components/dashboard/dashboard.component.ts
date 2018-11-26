@@ -1,13 +1,23 @@
-import { Component } from '@angular/core';
-import { CARDITEMS } from '../../mock-data/mock-dashboard-card-items';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IApiResponse } from '../../models/dashboard-card-items.model';
+import { PinService } from '../../services/pin.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.css']
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit {
 
-  cardItems = CARDITEMS;
+  apiResponse$: Observable<IApiResponse>;
+
+  constructor(private pinService: PinService) {
+  }
+
+  ngOnInit() {
+
+    this.apiResponse$ = this.pinService.getPins();
+  }
 
 }

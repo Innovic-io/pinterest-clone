@@ -11,6 +11,8 @@ import { SharedModule } from './share/shared.module';
 import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { PinService } from './services/pin.service';
 
 
 @NgModule({
@@ -27,9 +29,11 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     SharedModule,
     AngularFontAwesomeModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PinService],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
