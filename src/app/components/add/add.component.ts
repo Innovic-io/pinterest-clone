@@ -1,4 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
+import { DataService } from '../../services/data.service';
+import { IPin } from '../../models/dashboard-card-items.model';
 
 @Component({
   selector: 'app-add',
@@ -6,12 +8,19 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./add.component.css']
 })
 export class AddComponent {
+
   imageUrl: string;
 
   @ViewChild('fileInput') fileInput: ElementRef;
 
-  addPin(data) {
-    console.log(data);
+  constructor( private dataService: DataService) {}
+
+  addPin(pin: IPin) {
+
+    const pinWithNewImage = { ...pin, url: '/assets/dress.jpg' };
+
+    this.dataService.createPin(pinWithNewImage);
+    this.clearSelectedPicture();
   }
 
   handleFileInput(file: FileList) {
@@ -26,11 +35,11 @@ export class AddComponent {
     reader.onloadend = (event: any) => {
       this.imageUrl = event.target.result;
     };
-
-    this.fileInput.nativeElement.value = null;
+    this.clearSelectedPicture();
   }
 
   clearSelectedPicture() {
     this.imageUrl = null;
+    this.fileInput.nativeElement.value = null;
   }
 }

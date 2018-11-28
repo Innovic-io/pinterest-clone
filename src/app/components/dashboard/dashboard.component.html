@@ -1,4 +1,9 @@
 <div class="masonry bg-white p-3">
+
+  <div *ngFor="let pin of (pins$ | async)" class="item">
+    <app-card [pin]="pin"></app-card>
+  </div>
+
   <div *ngFor="let pin of (apiResponse$ | async)?.images" class="item">
     <app-card [pin]="pin"></app-card>
   </div>

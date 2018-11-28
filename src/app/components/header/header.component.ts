@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -9,5 +9,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 export class HeaderComponent {
 
   @Input() logoUrl: string;
+
+  @Output() searchBy = new EventEmitter<string>();
+
+  onSearchBy(term: string) {
+    this.searchBy.emit(term);
+  }
 
 }

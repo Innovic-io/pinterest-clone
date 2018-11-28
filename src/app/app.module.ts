@@ -12,7 +12,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { SearchComponent } from './components/header/search/search.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-import { PinService } from './services/pin.service';
 
 
 @NgModule({
@@ -32,7 +31,7 @@ import { PinService } from './services/pin.service';
     FormsModule,
     HttpClientModule
   ],
-  providers: [PinService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

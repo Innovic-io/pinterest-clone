@@ -4,7 +4,7 @@
      <a [routerLink]="['./dashboard']"><img [src]="logoUrl" width="27px" height="27px"/></a>
     </div>
     <div class="nav-item search pl-3">
-      <app-search></app-search>
+      <app-search (searchBy)="onSearchBy($event)"></app-search>
     </div>
     <ul class="navbar-nav pl-3">
       <li class="nav-item pl-2 pr-2"><a class="nav-link p-2" routerLink="/dashboard" routerLinkActive="active">Dashboard</a></li>
