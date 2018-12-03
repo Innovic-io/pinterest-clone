@@ -1,0 +1,30 @@
+.imgContainer {
+  max-width: 628px;
+  border-radius: 8px;
+  margin: 32px auto;
+  width: 100%;
+
+}
+.imgStyle {
+  max-width: 564px;
+  height: 600px;
+  border-radius: 8px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 25px;
+  border-radius: 8px;
+}
+.imgDisplay {
+  height: 100%;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-content: center;
+  background-size: contain;
+  position: relative;
+}
+.caption {
+  font-size: 1.5em;
+  padding: 30px;
+  color: #222;
+}

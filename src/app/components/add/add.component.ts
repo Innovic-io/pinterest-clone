@@ -17,7 +17,7 @@ export class AddComponent {
 
   addPin(pin: IPin) {
 
-    const pinWithNewImage = { ...pin, url: '/assets/dress.jpg' };
+    const pinWithNewImage = { ...pin, url: this.imageUrl, date: new Date()};
 
     this.dataService.createPin(pinWithNewImage);
     this.clearSelectedPicture();

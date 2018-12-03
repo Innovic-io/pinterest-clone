@@ -5,7 +5,10 @@
   display: inline-block;
   width: 100%;
 }
-
+a {
+  cursor: zoom-in;
+  text-decoration: none;
+}
 /** responsive cards **/
 @media only screen and (min-width: 1820px) {
   .masonry {

@@ -19,10 +19,13 @@ export class PinService {
     return this.http.get<IApiResponse>(`${this.apiEndPoint}/latest`);
   }
 
+  getPin(term: string): Observable<IApiResponse> {
+    return this.http.get<IApiResponse>(`${this.apiEndPoint}/${term}`);
+  }
   searchPins(term: string): Observable<IApiResponse> {
-
     const searchParams = new HttpParams().set('query', term);
 
     return this.http.get<IApiResponse>(`${this.apiEndPoint}/search`, {params: searchParams});
   }
+
 }

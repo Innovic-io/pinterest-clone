@@ -1,0 +1,12 @@
+<div class="d-flex justify-content-center align-items-center">
+  <div class="bg-white imgContainer">
+    <div class="align-items-center justify-content-center">
+      <div class="justify-content-center d-flex imgStyle">
+        <div [ngStyle]="{'background-image': 'url('+ (apiResponse$ | async)?.url +')'}" class="imgDisplay"> </div>
+      </div>
+      <div >
+        <div class="caption">{{(apiResponse$ | async)?.id}}</div>
+      </div>
+    </div>
+  </div>
+</div>
