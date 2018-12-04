@@ -13,3 +13,8 @@ img {
 .card-title {
   color: #211922;
 }
+a {
+  text-decoration: none;
+  color: #222222;
+  cursor: zoom-in;
+}

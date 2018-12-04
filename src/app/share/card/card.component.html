@@ -3,7 +3,7 @@
     <div class="card-body w-100 p-2">
       <div><img [src]="pin?.url"></div>
       <div class="card-title">{{pin?.id}}</div>
-      <div class="card-date">{{pin?.date | date:'short'}}</div>
+      <div class="card-date">{{pin?.date | timeAgo }}</div>
     </div>
   </div>
 </a>

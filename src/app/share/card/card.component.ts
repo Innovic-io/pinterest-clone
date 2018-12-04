@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { IPin } from '../../models/dashboard-card-items.model';
 
 @Component({
@@ -7,7 +7,11 @@ import { IPin } from '../../models/dashboard-card-items.model';
   templateUrl: './card.component.html',
   styleUrls: ['./card.component.css']
 })
-export class CardComponent {
+export class CardComponent implements OnInit {
 
   @Input() pin: IPin;
+
+  ngOnInit() {
+    this.pin.date = new Date();
+  }
 }
